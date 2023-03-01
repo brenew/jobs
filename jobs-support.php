@@ -6,7 +6,7 @@ namespace mercurypress;
  * Get Open Jobs Shortcode
  */
 function get_open_jobs_shortcode() {	
-	$endpoint = 'https://api.resumatorapi.com/v1/jobs/status/open?apikey=m6JG2AJasdNl6JIdMdG1bfUaVTpP6VDz';
+	$endpoint = 'https://api.resumatorapi.com/v1/jobs/status/open?apikey=APIKEYGOESHERE';
 	
 	$request = wp_remote_get( $endpoint );
 
@@ -77,9 +77,9 @@ function get_job_details_shortcode() {
 	); 
 	$time = time();
 	if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
-		$endpoint = 'https://api.resumatorapi.com/v1/jobs/'.$jobId.'?apikey=m6JG2AJasdNl6JIdMdG1bfUaVTpP6VDz&unique='.$time;
+		$endpoint = 'https://api.resumatorapi.com/v1/jobs/'.$jobId.'?apikey=APIKEYGOESHERE&unique='.$time;
 	} else {
-		$endpoint = 'http://api.resumatorapi.com/v1/jobs/'.$jobId.'?apikey=m6JG2AJasdNl6JIdMdG1bfUaVTpP6VDz&unique='.$time;
+		$endpoint = 'http://api.resumatorapi.com/v1/jobs/'.$jobId.'?apikey=APIKEYGOESHERE&unique='.$time;
 	}
 	
 	$request = wp_remote_get( $endpoint, $args );
@@ -97,9 +97,9 @@ function get_job_details_shortcode() {
 
 	// Get Hiring manager information
 	if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
-		$endpoint = 'https://api.resumatorapi.com/v1/users/'.$userId.'?apikey=m6JG2AJasdNl6JIdMdG1bfUaVTpP6VDz&unique='.$time;
+		$endpoint = 'https://api.resumatorapi.com/v1/users/'.$userId.'?apikey=APIKEYGOESHERE&unique='.$time;
 	} else {
-		$endpoint = 'http://api.resumatorapi.com/v1/users/'.$userId.'?apikey=m6JG2AJasdNl6JIdMdG1bfUaVTpP6VDz&unique='.$time;
+		$endpoint = 'http://api.resumatorapi.com/v1/users/'.$userId.'?apikey=APIKEYGOESHERE&unique='.$time;
 	}
 
 	$request = wp_remote_get( $endpoint, $args );
