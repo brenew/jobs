@@ -1,0 +1,46 @@
+.jobs-list {
+    
+    &--job {
+        display: block;
+        text-align: center;
+    }
+
+    &--job:nth-child(odd) {
+        background-color: $primary-color;
+        color: white;
+    }
+    &--job:nth-child(even) {
+        background-color: $tertiary-color;
+    }
+
+    &--title, &--meta, &--details {
+        position: relative;
+        top: $spacer;
+        transition: top .3s ease-in-out;
+    }
+
+    &--title {
+        margin: 0 0 $spacer;
+    }
+
+    &--details {
+        margin: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity .3s ease-in-out;
+    }
+
+    &--job:hover {
+        text-decoration: none;
+
+        .jobs-list--title, .jobs-list--meta {
+            top: -$spacer;
+        }
+
+        .jobs-list--details {
+            opacity: 1;
+            top: -$spacer;
+        }
+    }
+
+}

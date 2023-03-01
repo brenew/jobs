@@ -1,0 +1,56 @@
+.job-detail {
+
+    &--wrap {
+        padding: $spacer * 1.5 $spacer;
+
+        @media (min-width: $break-tablet) {
+            $padding: $spacer * 2;
+        }
+
+        @media (min-width: $break-desktop) {
+            padding: $spacer * 3;
+        }
+    }
+
+    &--inner {
+        margin: 0 auto;
+        max-width: $break-desktop;
+    }
+
+    &--overview {
+        background-color: $primary-color;
+        color: white;
+    }
+
+    &--description h2 {
+        color: $black;
+        font-size: 24px;
+        margin: $spacer*3 0 $spacer;
+
+        @media (min-width: $break-desktop) {
+            font-size: 32px;
+        }
+    }
+
+    &--application {
+        background-color: $tertiary-color;
+
+        h3 {
+            color: $primary-color;
+        }
+    }
+
+    ul > li::marker {
+        color: $primary-color;
+    }
+
+    ul > li > a {
+        color: $black;
+        text-decoration: underline;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+}
